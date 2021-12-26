@@ -1,0 +1,15 @@
+Name: orderservice.rpc
+ListenOn: 127.0.0.1:8083
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  Key: orderservice.rpc
+DataSource: admin:password@tcp(localhost:3308)/order
+Table: orders
+Cache:
+  - Host: localhost:6379
+CheckInventoryService:
+  Etcd:
+    Hosts:
+      - localhost:2379
+    Key: inventoryservice.rpc

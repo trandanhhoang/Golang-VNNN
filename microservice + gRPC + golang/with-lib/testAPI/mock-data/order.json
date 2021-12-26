@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "_id": "56955ca46063c5600627f393",
+      "name": "shirt",
+      "weight": 0.2,
+      "quantity": 1,
+      "data": {
+        "size": "x",
+        "length": "50cm"
+      }
+    },
+    {
+      "_id": "56955ca46063c5600627f395",
+      "name": "pant",
+      "weight": 0.5,
+      "quantity": 1,
+      "data": {
+        "size": "xl",
+        "length": "40cm"
+      }
+    },
+    {
+      "_id": "56955ca46063c5600627f396",
+      "name": "pant",
+      "weight": 0.2,
+      "quantity": 1,
+      "data": {
+        "size": "xxl",
+        "length": "50cm"
+      }
+    }
+  ],
+  "token": "abc"
+}

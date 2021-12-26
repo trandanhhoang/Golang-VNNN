@@ -1,0 +1,14 @@
+syntax="proto3";
+package service;
+
+service UserService{
+    rpc VerifyUserByToken(TokenRequest) returns (BaseRespond){}
+}
+
+message TokenRequest{
+    string token = 1;
+}
+
+message BaseRespond{
+    bool success = 1;
+}

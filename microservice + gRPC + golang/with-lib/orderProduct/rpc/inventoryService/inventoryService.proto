@@ -1,0 +1,15 @@
+syntax="proto3";
+package inventoryservice;
+
+service InventoryService{
+    rpc CheckProductInInventory(ProductResquest) returns (BaseRespond){}
+    rpc DecreaseInventory(ProductResquest) returns (BaseRespond){}
+}
+
+message ProductResquest{
+    bytes products = 1;
+}
+
+message BaseRespond{
+    bool success = 1; 
+}

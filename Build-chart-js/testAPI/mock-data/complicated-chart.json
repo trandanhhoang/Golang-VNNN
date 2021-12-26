@@ -1,0 +1,40 @@
+{
+  "type": "line",
+  "data": {
+    "labels": [1, 2, "3", 4, 5],
+    "datasets": [
+      {
+        "label": "Rainfall",
+        "data": [200, 90, "120", 400, 500],
+        "fill": false,
+        "borderColor": "green",
+        "backgroundColor": "green",
+        "borderWidth": 10
+      }
+    ]
+  },
+  "options": {
+    "annotation": {
+      "annotations": {
+        "type": "line",
+        "mode": "vertical",
+        "scaleID": "x-axis-0",
+        "borderColor": "green",
+        "borderWidth": 1,
+        "label": {
+          "enabled": true,
+          "position": "center",
+          "content": 50
+        }
+      }
+    },
+    "plugins": {
+      "datalabels": {
+        "display": true,
+        "align": "bottom",
+        "backgroundColor": "#ccc",
+        "borderRadius": 3
+      }
+    }
+  }
+}

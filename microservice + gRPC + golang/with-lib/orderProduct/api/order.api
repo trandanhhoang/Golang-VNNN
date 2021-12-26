@@ -1,0 +1,41 @@
+syntax = "v1"
+
+info(
+	title: gateway
+	desc: learn micro-service
+	author: "trandanhhoang"
+	email: "danhhoang5920@gmail.com"
+)
+type (
+	testGetReq {
+		Token string `form:"token"`
+	}
+
+	testGetResp {
+		Success bool `json:"success"`
+	}
+)
+
+type (
+	orderReq {
+		Token    string    `json:"token"`
+		Products []Product `json:"products"`
+	}
+
+	Product {
+		Name     string `json:"name"`
+		Quantity int    `json:"quantity"`
+	}
+
+	orderResp {
+		Success bool `json:"success"`
+	}
+)
+
+service order-api {
+	@handler TestHandler
+	get /test (testGetReq) returns (testGetResp)
+	
+	@handler OrderHandler
+	post /order (orderReq) returns (orderResp)
+}

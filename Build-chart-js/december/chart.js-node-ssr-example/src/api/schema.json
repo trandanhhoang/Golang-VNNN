@@ -1,0 +1,41 @@
+{
+  "type": {
+    "in": ["body"],
+    "isEmpty": false,
+    "isString": true,
+    "errorMessage": "type need to be a string"
+  },
+  "data": {
+    "in": ["body"],
+    "isEmpty": false,
+    "isObject": true,
+    "errorMessage": "data need to be an object"
+  },
+  "data.labels": {
+    "isEmpty": false,
+    "isArray": true,
+    "errorMessage": "data.labels need to be an array"
+  },
+  "data.datasets.*.label": {
+    "isEmpty": false,
+    "isString": true,
+    "errorMessage": "datasets.*.label need to be a string"
+  },
+  "data.datasets.*.data": {
+    "isEmpty": false,
+    "isArray": true,
+    "errorMessage": "datasets.*.data need to be an array"
+  },
+  "data.datasets.*.backgroundColor": {
+    "optional": { "options": { "nullable": true } }
+  },
+  "data.datasets.*.borderColor": {
+    "optional": { "options": { "nullable": true } }
+  },
+  "data.datasets.*.borderWidth": {
+    "optional": { "options": { "nullable": true } },
+    "isInt": true,
+    "toInt": true,
+    "errorMessage": "borderWidth is wrong"
+  }
+}

@@ -1,0 +1,30 @@
+syntax="proto3";
+package service;
+
+service UserService{
+    rpc VerifyUserByToken(TokenRequest) returns (BaseRespond){}   
+}
+
+service InventoryService{
+    rpc CheckProductInInventory(ProductResquest) returns (BaseRespond){}
+}
+
+service OrderService{
+    rpc SaveOrder(SaveOrderResquest) returns (BaseRespond){}
+}
+
+message SaveOrderResquest{
+    bytes order = 1;
+}
+
+message ProductResquest{
+    bytes products = 1;
+}
+
+message TokenRequest{
+    string token = 1;
+}
+
+message BaseRespond{
+    bool success = 1;
+}

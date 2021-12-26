@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package orderservice;
+
+service OrderService{
+    rpc SaveOrder(SaveOrderResquest) returns (BaseRespond){}
+}
+
+message SaveOrderResquest{
+    bytes order = 1;
+}
+
+message BaseRespond{
+    bool success = 1;
+}

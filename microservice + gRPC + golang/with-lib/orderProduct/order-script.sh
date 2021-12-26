@@ -1,0 +1,1 @@
+go run rpc/orderService/orderservice.go -f rpc/orderService/etc/orderservice.yaml

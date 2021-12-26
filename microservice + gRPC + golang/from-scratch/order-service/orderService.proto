@@ -1,0 +1,22 @@
+syntax="proto3";
+package service;
+
+service OrderService{
+    rpc SaveOrder(SaveOrderResquest) returns (BaseRespond){}
+}
+
+service InventoryService{
+    rpc DecreaseInventory(ProductResquest) returns (BaseRespond){}
+}
+
+message SaveOrderResquest{
+    bytes order = 1;
+}
+
+message BaseRespond{
+    bool success = 1;
+}
+
+message ProductResquest{
+    bytes products = 1;
+}

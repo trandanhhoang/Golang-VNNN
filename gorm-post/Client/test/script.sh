@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST -d '{"name":'"\"$1\""',"data":'"\"$2\""'}' http://localhost:4444/report_weather
