@@ -1,5 +1,8 @@
+// TODO
 syntax="proto3";
 package service;
+
+SERVER GATEWAY - SERVER USERSERVICE
 
 service UserService{
     rpc VerifyUserByToken(TokenRequest) returns (BaseRespond){}   
@@ -28,3 +31,4 @@ message TokenRequest{
 message BaseRespond{
     bool success = 1;
 }
+

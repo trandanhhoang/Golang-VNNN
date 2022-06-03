@@ -1,0 +1,10 @@
+{"create": {"_index": "courses","_id": "4"}}
+{"title": "Java cơ bản", "tag": ["java","jv","class","oop","OOP"]}
+{"create": {"_index": "courses","_id": "1"}}
+{"title": "Cấu trúc dữ liệu và giải thuật", "tag": [ "big o","O","dsa","data structure","algorithm"]}
+{"create": {"_index": "courses","_id": "2"}}
+{"title": "C++ cơ bản", "tag": ["Cpp","C++","C plus plus,","cpp","c++"]}
+{"create": {"_index": "courses","_id": "3"}}
+{"title": "Javascripts cơ bản", "tag": ["js","var","let"]}
+{"create": {"_index": "courses","_id": "5"}}
+{"title": "Python cơ bản", "tag": ["Py","py","python,","data","science","functional programming"]}

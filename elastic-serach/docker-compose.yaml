@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  elasticsearch:
+    container_name: elastic-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.2.1
+    environment:
+      - cluster.name=elastic-cluster
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+    # - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - 9200:9200
+    mem_limit: 1g
+    restart: always
+
+volumes:
+  esdata01:
+    driver_opts:
+      device: ./data
+      o: bind
+      type: tmpfs

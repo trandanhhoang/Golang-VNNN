@@ -30,10 +30,12 @@ func main() {
 	if err := godotenv.Load("../.env"); err != nil {
 		log.Printf("Error loading .env file")
 	}
+
 	//The communication protocol between user and gateway: HTTP + JSON
 	port := os.Getenv("GATEWAY_PORT")
 	router := gin.Default()
-	router.POST("/order", CreateOrder)
+	router.POST("/order", CreateOrder) //
+
 	fmt.Println("Gateway is running on port ", port)
 	router.Run("localhost:" + port)
 }
